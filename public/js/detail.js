@@ -7,8 +7,9 @@
   function renderHead(d) {
     document.getElementById('crumb').textContent = `${d.canteen.name} · ${d.window.name}`;
     document.getElementById('head').innerHTML = `
-      <div class="card">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
+      <div class="card hero-card">
+        <img class="hero-img" src="${dishImage(d.dish.name)}" alt="" onerror="this.style.display='none'">
+        <div style="padding:14px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
           <div>
             <div class="dish-name" style="font-size:19px">${escapeHtml(d.dish.name)} ${d.dish.is_new ? '<span class="tag new">新品</span>' : ''}</div>
             <div class="tags" style="margin-top:8px">

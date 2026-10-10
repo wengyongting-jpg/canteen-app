@@ -84,6 +84,7 @@
     const reason = opts.reason ? `<div class="dish-meta">${escapeHtml(opts.reason)}</div>` : '';
     return `
       <div class="dish-row click" onclick="location.href='detail.html?id=${d.dish_id}'">
+        <img class="dish-thumb" src="${dishImage(d.name)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
         <div style="flex:1;min-width:0">
           <div class="dish-name">${escapeHtml(d.name)} ${d.is_new ? '<span class="tag new">新品</span>' : ''} ${extra}</div>
           <div class="dish-meta">${escapeHtml(where)}${d.review_count != null ? ` · ${d.review_count}条评价` : ''}</div>

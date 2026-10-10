@@ -47,18 +47,24 @@
       const where = [d.canteen_name, d.window_name].filter(Boolean).join(' · ');
       const evQuote = it.evidence && it.evidence.length ? `“${escapeHtml(it.evidence[0].quote)}”` : '';
       return `
-      <div class="card">
-        <div style="display:flex;justify-content:space-between;gap:10px">
-          <div style="flex:1;min-width:0" onclick="location.href='detail.html?id=${d.id}'">
-            <div class="dish-name">${escapeHtml(d.name)} ${d.is_new ? '<span class="tag new">新品</span>' : ''} ${allergenBadge(it.allergen_status)}</div>
-            <div class="dish-meta">${escapeHtml(where)} · ¥${d.price}</div>
-            <div class="tags">${(d.taste_tags || []).map(t => `<span class="tag hot">${escapeHtml(t)}</span>`).join('')}</div>
-          </div>
-          <span class="score-badge">${Number(it.weighted_score).toFixed(1)}分</span>
+      <div class="rec-card">
+        <div class="rec-media" onclick="location.href='detail.html?id=${d.id}'">
+          <img class="rec-img" src="${dishImage(d.name)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+          <span class="rank-pill">TOP ${idx + 1}</span>
         </div>
-        <div class="reason">${escapeHtml(it.reason)}</div>
-        ${evQuote ? `<div class="dish-meta" style="margin-top:6px">${evQuote}</div>` : ''}
-        ${evidenceBtn(it, idx)}
+        <div class="rec-body">
+          <div style="display:flex;justify-content:space-between;gap:10px">
+            <div style="flex:1;min-width:0" onclick="location.href='detail.html?id=${d.id}'">
+              <div class="dish-name">${escapeHtml(d.name)} ${d.is_new ? '<span class="tag new">新品</span>' : ''} ${allergenBadge(it.allergen_status)}</div>
+              <div class="dish-meta">${escapeHtml(where)} · ¥${d.price}</div>
+              <div class="tags">${(d.taste_tags || []).map(t => `<span class="tag hot">${escapeHtml(t)}</span>`).join('')}</div>
+            </div>
+            <span class="score-badge">${Number(it.weighted_score).toFixed(1)}分</span>
+          </div>
+          <div class="reason">${escapeHtml(it.reason)}</div>
+          ${evQuote ? `<div class="dish-meta" style="margin-top:6px">${evQuote}</div>` : ''}
+          ${evidenceBtn(it, idx)}
+        </div>
       </div>`;
     }).join('') || '<div class="empty">没有找到合适的菜</div>';
 
