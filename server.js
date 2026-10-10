@@ -9,6 +9,13 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// 空库自动种子（首次部署/新容器 data/ 不随 git 走，启动时自动生成）
+const db = getDb();
+if (db.prepare('SELECT COUNT(*) n FROM canteens').get().n === 0) {
+  console.log('[init] 空数据库，自动生成种子数据...');
+  require('./scripts/seed');
+}
+
 // 校验服务依赖的评价索引（启动时与写入后刷新）
 setReviewMap(getDb());
 
