@@ -1,0 +1,12 @@
+[
+  { "id": "rn-001", "query": "有什么新菜推荐", "user_id": null, "expect": { "min_items": 1 } },
+  { "id": "rn-002", "query": "最近上新了什么啊", "user_id": null, "expect": { "min_items": 1 } },
+  { "id": "rn-003", "query": "想尝尝鲜，有新品吗", "user_id": null, "expect": { "min_items": 1 } },
+  { "id": "rn-004", "query": "第三食堂新上的菜", "user_id": null, "expect": { "canteen_id": 3, "min_items": 1 } },
+  { "id": "rn-005", "query": "第二食堂的新品有哪些", "user_id": null, "expect": { "canteen_id": 2, "min_items": 1 } },
+  { "id": "rn-006", "query": "第一食堂上新了吗", "user_id": null, "expect": { "canteen_id": 1, "min_items": 1 } },
+  { "id": "rn-007", "query": "有没有新菜，来点没吃过的", "user_id": null, "expect": { "min_items": 1 } },
+  { "id": "rn-008", "query": "新菜里面便宜点的", "user_id": null, "expect": { "max_price": 8, "min_items": 1 } },
+  { "id": "rn-009", "query": "本周新品榜单看看", "user_id": null, "expect": { "min_items": 1 } },
+  { "id": "rn-010", "query": "求推荐刚上新的新菜", "user_id": null, "expect": { "min_items": 1 } }
+]

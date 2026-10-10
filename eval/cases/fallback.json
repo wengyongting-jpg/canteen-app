@@ -1,0 +1,22 @@
+[
+  { "id": "fb-c01", "query": "火星食堂有什么好吃的", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-c02", "query": "第六食堂今天卖啥", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-c03", "query": "月球食堂有推荐吗", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-c04", "query": "海底食堂哪家窗口好", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-c05", "query": "第五食堂吃饭去怎么样", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-c06", "query": "东九食堂晚上开吗", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-c07", "query": "老校区食堂有什么菜", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-c08", "query": "网红食堂值得去吗", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-c09", "query": "高架食堂在哪栋楼", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-c10", "query": "山顶食堂能点外卖吗", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-d01", "query": "佛跳墙", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-d02", "query": "来份龙肉盖饭", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-d03", "query": "神仙汤，预算2块以内", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-d04", "query": "满汉全席", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-d05", "query": "我想吃红烧龙肉", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-d06", "query": "御膳房佛跳墙，2块钱以内", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-d07", "query": "天山雪莲煲", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-d08", "query": "深海龙珠 2块以下", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-d09", "query": "凤髓羹", "expect": { "fallback": true, "min_suggestions": 1 } },
+  { "id": "fb-d10", "query": "千层龙鳞饼 2块以内", "expect": { "fallback": true, "min_suggestions": 1 } }
+]

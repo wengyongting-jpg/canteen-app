@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: canteen-app
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run seed
+    startCommand: npm start
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: LLM_API_BASE
+        value: https://api.deepseek.com
+      - key: LLM_MODEL
+        value: deepseek-chat
+      - key: LLM_TIMEOUT_MS
+        value: "5000"
+      - key: LLM_API_KEY
+        sync: false
+      - key: ADMIN_TOKEN
+        sync: false

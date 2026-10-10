@@ -1,0 +1,20 @@
+{
+  "name": "canteen-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "校园食堂点评推荐 Web 应用（移动端优先）",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node scripts/seed.js",
+    "eval": "node scripts/eval.js",
+    "eval:full": "node eval/runner.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "express": "^4.21.2"
+  }
+}

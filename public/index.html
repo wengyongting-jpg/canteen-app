@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>食堂吃什么 · 首页</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page">
+  <header class="topbar">
+    <div class="brand">食堂吃什么</div>
+    <div class="sub">同学真实点评 · 帮你避开踩雷窗口</div>
+    <div class="searchbar">
+      <input id="q" type="search" placeholder="比如：便宜的辣菜 / 二食堂素食" enterkeyhint="search">
+      <button id="ask">问问吃什么</button>
+    </div>
+    <div class="chips" id="quick-chips">
+      <span class="chip" data-q="辣菜">辣</span>
+      <span class="chip" data-q="8块以下的菜">便宜</span>
+      <span class="chip" data-q="素食">素食</span>
+      <span class="chip" data-q="新品">尝鲜</span>
+    </div>
+  </header>
+
+  <section class="section" id="reco">
+    <div class="sec-head"><h2>今日推荐</h2></div>
+    <div id="reco-list"><div class="loading">加载中…</div></div>
+  </section>
+
+  <section class="section" id="rankings">
+    <div class="sec-head"><h2>新品榜</h2><button class="more" data-toggle="new-list">查看全部 10</button></div>
+    <div class="card" id="new-list"><div class="loading">加载中…</div></div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head"><h2>踩雷预警榜</h2><button class="more" data-toggle="mine-list">查看全部 10</button></div>
+    <div class="card" id="mine-list"><div class="loading">加载中…</div></div>
+  </section>
+</div>
+<script src="js/app.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

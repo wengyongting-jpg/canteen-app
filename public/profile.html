@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>我的口味 · 食堂吃什么</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page">
+  <header class="topbar">
+    <div class="brand">我的口味</div>
+    <div class="sub" id="uid-line">设备标识加载中…</div>
+  </header>
+
+  <section class="section">
+    <div class="sec-head"><h2>口味偏好</h2><span class="dish-meta">可多选</span></div>
+    <div class="card"><div class="chips" id="taste-chips"></div></div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head"><h2>过敏原</h2><span class="dish-meta">选中后将强制过滤相关菜品</span></div>
+    <div class="card"><div class="chips" id="allergen-chips"></div></div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head"><h2>饮食限制</h2></div>
+    <div class="card"><div class="chips" id="diet-chips"></div></div>
+  </section>
+
+  <section class="section">
+    <button class="btn-primary" id="save">保存偏好</button>
+  </section>
+
+  <section class="section">
+    <div class="sec-head"><h2>后台管理</h2></div>
+    <div class="card">
+      <div class="dish-meta">查看被限流/屏蔽的评价并处理（需管理令牌）</div>
+      <div class="searchbar" style="margin-top:10px">
+        <input id="admin-token" type="password" placeholder="管理令牌 ADMIN_TOKEN">
+        <button id="admin-load">查看</button>
+      </div>
+      <div id="admin-list" style="margin-top:10px"></div>
+    </div>
+  </section>
+</div>
+<script src="js/app.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>
